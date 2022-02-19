@@ -1,0 +1,92 @@
+<head>
+	<link href= "hw3Style.css" rel="stylesheet">
+</head>
+
+<form method = "POST" action = "">
+
+<table>
+	<caption><h3>Campus Visit Feedback Form</h3></caption>
+<tr>
+<th>
+    <label> Student Name: <input name = "name" type = "text" size = "30" /> </label>
+</th>
+</tr>
+<tr>
+<th>
+      <label> Street Address: <input name = "street" type = "text" size = "30" /> </label>
+</th>
+</tr>
+<tr>
+<th>
+      <label> Email Address: <input name = "email" type = "text" size = "30" /> </label>
+</th>
+</tr>
+
+<span>
+<tr>
+<th>
+      <b>Things you liked:</b><br />
+      <label> Students <input name = "attraction[]" type = "checkbox" value = "students" /> </label>
+      <label> Location <input name = "attraction[]" type = "checkbox" value = "location" /> </label>
+      <label> Campus <input name = "attraction[]" type = "checkbox" value = "campus" /> </label>
+      <label> Courses Offered <input name = "attraction[]" type = "checkbox" value = "courses" /> </label>
+      <label> Housing <input name = "attraction[]" type = "checkbox" value = "housing" /> </label>
+      <label> Sports <input name = "attraction[]" type = "checkbox" value = "sports" /> </label>
+</th>
+</tr>
+
+<tr>
+<th>
+      <b>How did you become interested in the university?</b><br />
+      <label> Family <input name = "connection" type = "radio" value = "family" /> </label>
+      <label> Friends <input name = "connection" type = "radio" value = "friend" /> </label>
+      <label> Televesion <input name = "connection" type = "radio" value = "tv" /> </label>
+      <label> Internet <input name = "connection" type = "radio" value = "internet" /> </label>
+      <label> Other <input name = "connection" type = "radio" value = "other" /> </label>
+</th>
+</tr>
+
+</span>
+
+<tr>
+<th>
+
+<tr>
+<th>
+Departments Visited (Ctrl + Click to select multiple):
+</th>
+</tr>
+
+<tr>
+<th>
+         <select name = "departments" multiple>
+		 <option> Computer Science </option>
+	         <option> Engineering </option>
+	         <option> Math/Physics/Astronomy </option>
+	         <option> Business </option>
+	         <option> Communication </option>
+	         <option> Literature </option>
+	         <option> History </option>
+	         <option> Music </option>
+	      </select>
+      </label> 
+</th>
+</tr>
+
+<tr>
+<th>
+      <label> Additional Comments: <br />
+         <textarea name = "comments" rows = "4" cols = "36"> Enter your comments here: </textarea>
+      </label>
+</th>
+</tr>
+
+<tr>
+<th>
+      <input type = "submit" value = "Submit Form" />
+      <input type = "reset" value = "Reset Form" />
+</th>
+</tr>
+</table>
+
+</form>

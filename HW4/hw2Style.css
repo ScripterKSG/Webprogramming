@@ -1,0 +1,16 @@
+
+body {
+	  background-color: black;
+  }
+
+li {
+	    color: ghostwhite;
+	    text-align: center;
+  }
+ 
+.top {
+	font-style: oblique;
+	font-size: 120%;
+	color: darkviolet;
+	text-align:center;
+}

@@ -1,0 +1,26 @@
+
+table {
+	text-align:center;
+	background-color:#CC5500;
+	color:black;
+	float:left;
+}
+
+caption {
+	background-color:black;
+	color:#CC5500;
+	font-weight:bold;
+	font-style:italic;
+	font-family:serif;
+	font-size:125%;
+	text-decoration:underline;
+}
+
+th {
+	font-size:110%;
+}
+
+body {
+	background-color:#CC5500;
+}
+
