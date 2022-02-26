@@ -1,0 +1,25 @@
+
+table {
+	text-align:center;
+	background-color:#add8e6;
+	color:black;
+	float:left;
+}
+
+caption {
+	background-color:orange;
+	color:black;
+	font-weight:bold;
+	font-style:italic;
+	font-family:serif;
+	font-size:125%;
+	text-decoration:underline;
+}
+
+th {
+	font-size:110%;
+}
+
+body {
+	background-color:#add8e6;
+}
