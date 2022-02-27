@@ -47,6 +47,17 @@
 	max-width: 36em;
 }
 
+#topContent
+{
+	float: left;
+	margin-left: 1%;
+}
+
+#topContent h3
+{
+	margin: 0px
+}
+
 #footer
 {
 	clear: both;
