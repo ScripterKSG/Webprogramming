@@ -1,0 +1,26 @@
+<head>
+    <title>Mortgage Caluclator</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Mortgage Calculator">
+    <meta name="author" content="Jason Nguyen">
+    <link href= "calc.css" rel="stylesheet">
+    <script src="calc.js"> </script>
+ </head> 
+
+
+<form id="calc" action = "">
+        <caption><h3>Mortgage Calculator</h3></caption>
+            <label> Principal Amount <input name = "principal" id="P"  type = "text" size = "20" /> </label><br>
+            <br>
+            <label> Yearly Interest Rate <input name = "interest" id="r"  type = "text" size = "20" /> </label><br>
+            <br>
+            <label> Loan Term (Months) <input name = "term" id="n"  type = "text" size = "20" /> </label><br>
+            <br>
+            <input id="calc" type="button" value="Calculate" onclick="mortgage();" />
+            <input type = "reset" value = "Reset Form" />
+            <br>
+            <br>
+    <textarea id="result" rows="3" cols="30">
+Results will print here
+    </textarea>
+</form>
