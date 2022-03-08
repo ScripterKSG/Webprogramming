@@ -1,0 +1,197 @@
+/*Top Layer*/
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+/*-------------Layer 1*/
+#top {
+  padding: 0.5em;
+  height: 11%;
+  max-height: 7em;
+  overflow: hidden;
+  background-color: #b48342;
+  border-bottom: 1px solid rgb(65, 63, 63);
+  text-align: center;
+}
+
+#main {
+  clear: both;
+  overflow: hidden;
+  height: 80%;
+  background-image: url("./Brown Homey Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer {
+  clear: both;
+  margin: 0;
+  background-color: #b48342;
+  border-bottom: 1px solid rgb(65, 63, 63);
+  font-size: 0.7em;
+  height: 7%;
+  width: 100%;
+  max-height: 5.5em;
+}
+
+/*----------------Layer 2*/
+#top-img {
+  overflow: inherit;
+  float: left;
+  margin: 0% auto 0% auto;
+  width: 15%;
+  height: 100%;
+}
+
+#top-brand {
+  overflow: hidden;
+  float: left;
+  width: 70%;
+  height: 100%;
+  margin: 0% auto 0% auto;
+}
+
+#top-signin {
+  overflow: hidden;
+  float: right;
+  margin: 0% auto 0% auto;
+  width: 7%;
+  height: 100%;
+}
+
+#leftnav {
+  overflow: inherit;
+  min-width: 5em;
+  float: left;
+  width: 12%;
+  margin: 0;
+  padding: 0;
+  background-color: #d1aa40;
+  border-right: 1px solid rgb(65, 63, 63);
+  font-weight: bold;
+  height: 100%;
+}
+
+#content {
+  overflow: inherit;
+  margin-left: 20%;
+  margin-right: 0;
+  padding: 0 0 0 0;
+  max-width: 65%;
+  height: 100%;
+}
+
+#signature {
+  float: right;
+  text-align: right;
+  margin-right: 2%;
+  width: 50%;
+}
+
+#date {
+  float: left;
+  text-align: left;
+  margin-left: 2%;
+  width: 50%;
+}
+
+/*---------------Layer 3 and on...*/
+
+#top-img a {
+  display: contents;
+}
+#top-img a:hover img {
+  opacity: 0.7;
+}
+#top-img img {
+  overflow: inherit;
+  height: 100%;
+  width: 100%;
+  max-width: 12em;
+  max-height: 5.75em;
+  float: left;
+}
+
+#top-brand #brand {
+  margin-top: 0.5%;
+  font-size: 9vmin;
+}
+
+#top-signin a {
+  color: #000;
+  display: content;
+}
+#top-signin a:hover {
+  color: #000;
+  font-weight: bolder;
+}
+#top-brand a {
+  color: #000;
+  display: content;
+}
+#top-brand a:hover {
+  color: #000;
+}
+#top-signin #signin {
+  margin: auto;
+  text-align: right;
+  padding-right: 10%;
+  padding-top: 10%;
+}
+
+#leftnav ul {
+  overflow: inherit;
+  min-width: inherit;
+  list-style-type: none;
+  margin: 0;
+  padding: 1em;
+}
+
+#leftnav input {
+  width: 10em;
+}
+
+#leftnav li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding: 1em 0 1em 0;
+  width: 100%;
+}
+
+#leftnav li a:hover {
+  color: black;
+  font-style: italic;
+  font-size: large;
+}
+
+#nav li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+#nav li:hover li a {
+  color: black;
+  background-color: #ef8c34;
+  font-style: italic;
+}
+
+.subnav {
+  position: absolute;
+  top: inherit;
+  left: -150px;
+  min-height: 0;
+  z-index: 1;
+  background-color: #ef8c34;
+}
+
+.subnav li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+#content h3 {
+}
