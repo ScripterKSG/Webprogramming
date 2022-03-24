@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <title>jQuery demo</title>
+   <meta charset="UTF-8">
+   <meta name="description" content="fadein and fadeout">
+   <meta name="author" content="Bill Bulko">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+</head> 
+
+<body>
+
+<script>
+   $(document).ready(function() {
+
+      $("#click1").click(function() {
+         $("#whale").fadeOut("fast",function() {
+            console.log("fading out")
+         })
+      })
+
+      $("#click2").click(function() {
+         $("#whale").fadeIn(3000,function() {
+            console.log("fading in")
+         })
+      })
+
+      $("#click3").click(function() {
+         $("#whale").animate({
+            height: "toggle"
+         }, "fast", function() {
+            console.log("animating")
+         }
+         )
+
+
+      })
+
+   })
+</script>
+
+<p id="click1"> Click here to fade out </p>
+<p id="click2"> Click here to fade in </p>
+<p id="click3"> Toggle </p>
+<img id="whale" src="taj_mahal.jpeg" style="position:relative; left:10px">
+
+</body>
+</html>
