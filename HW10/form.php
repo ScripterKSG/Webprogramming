@@ -36,6 +36,7 @@ if($blank5 == "http"){$correct = $correct + 1;}
 
 if($blank6 == "favicon"){$correct = $correct + 1;}
 
-echo '<script>alert(correct.toString() + " / " + "6")</script>';
+$score = strval($correct) . " / 6";
+echo '<script> alert("'.$score.'"); </script>';
 
-echo strval($correct) . " / 6";
+?>
