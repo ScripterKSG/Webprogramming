@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+   <title>HomeLab</title>
+   <meta charset="UTF-8">
+   <meta name="description" content="ENTER DESCRIPTION HERE">
+   <meta name="author" content="ENTER NAME HERE">
+   <link href='homelab.css' rel='stylesheet'>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script type='text/javascript' src='homelab.js'></script>
+</head> 
+
+<body onload="Render()">
+
+    <div id='top'>
+		<div id="top-img">
+			<a href='homelab.html'><img src='HL_Logo.png' alt='HomeLab logo'></a>
+		</div>
+		<div id="top-brand">
+			<a href='homelab.html'><h2 id="brand">HomeLab</h2></a>
+		</div>
+		<div id="top-signin">
+			<a href="register.html"><p id="signin">Sign-in</p></a>
+		</div>	
+	</div>
+
+	<div id="main">
+		<div id='leftnav'>
+			<ul id='nav'>
+				<li class='search_input'><input type="text" placeholder="Search.." ></li>
+				<li onmouseover="toggleMenu('sub-recipes')" onmouseout="toggleMenu('sub-recipes')"><a href='recipe_cat.html'>Recipes</a>
+	                <ul id='sub-recipes' class ='subnav'>
+					    <li><a href='breakfast.html'>Breakfast</a></li>
+					    <li><a href='lunch.html'>Lunch</a></li>
+					    <li><a href='dinner.html'>Dinner</a></li>
+                        <li><a href='sides.html'>Sides</a></li>
+						<li><a href='dessert.html'>Dessert</a></li>
+				    </ul>
+                </li>
+				<li><a href='technique.html'>Techniques</a></li>
+				<li><a href='contact.html'>Contact Us</a></li>
+			</ul>
+		</div>
+
+		<div id='content'>
+			<h3>Breakfast Recipes</h3>
+
+			<li><a href= 'Shakshuka.html'>Shakshuka</a></li>
+			<li><a href= 'SweetPotatoPancakes.html'>Sweet Potato Pancakes</a></li>
+			<li><a href='scones.html' >Scones</a></li>
+
+		</div>
+	</div>
+	
+	<div id='footer'>
+		<div id='date'>2.March 2022</div>
+		<div id='signature'> <a href='contact.html'>© Jason, Nicole, Mark, and Giovani</a></div>
+	</div>
+
+</body>
+</html>
+
