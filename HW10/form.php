@@ -38,5 +38,5 @@ if($blank6 == "favicon"){$correct = $correct + 1;}
 
 $score = strval($correct) . " / 6";
 echo '<script> alert("'.$score.'"); </script>';
-
+echo "You have completed the quiz."
 ?>

@@ -4,6 +4,7 @@
 
 <head>
     <link href="format.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
     <script src="form.js"></script>
 </head>
 
@@ -13,27 +14,27 @@
       <span id = "date">March 28, 2022</span>
 </h2>
 
-<form name="myForm" method = "POST" action = "form.php" onsubmit="return validate();">
+<form name="myForm" method = "POST" action = "form.php" onsubmit="return validateForm();" novalidate>
 
 <h3>True / False</h3>
 
-<b>1. "URL" stands for "Universal Reference Link."
+1. "URL" stands for "Universal Reference Link."
 <label> a) True <input name = "one" type = "radio" value = "a1" /> </label>
 <label> b) False <input name = "one" type = "radio" value = "b1" /> </label> <br> <br>
 
-<b>2. An Apple MacBook is an example of a Linux system.
+2. An Apple MacBook is an example of a Linux system.
 <label> a) True <input name = "two" type = "radio" value = "a2" /> </label>
 <label> b) False <input name = "two" type = "radio" value = "b2" /> </label>
 
 <h3>Multiple Choice</h3>
 
-<b>3. Which of these do NOT contribute to packet delay in a packet switching network?</b><br />
+3. Which of these do NOT contribute to packet delay in a packet switching network?<br/>
 <label> a) Processing delay at a router <input name = "three[]" type = "checkbox" value = "a3" /> </label> <br>
 <label> b) CPU workload on a client <input name = "three[]" type = "checkbox" value = "b3" /> </label><br>
 <label> c) Transmission delay along a communications link <input name = "three[]" type = "checkbox" value = "c3" /> </label><br>
 <label> d) Propagation delay<input name = "three[]" type = "checkbox" value = "d3" /> </label> <br><br>
 
-<b>4. This Internet layer is responsible for creating the packets that move across the network.</b><br />
+4. This Internet layer is responsible for creating the packets that move across the network.<br/>
 <label> a) Physical <input name = "four[]" type = "checkbox" value = "a4" /> </label> <br>
 <label> b) Data Link <input name = "four[]" type = "checkbox" value = "b4" /> </label><br>
 <label> c) Network <input name = "four[]" type = "checkbox" value = "c4" /> </label><br>
@@ -41,11 +42,11 @@
 
 <h3>Fill in the Blank</h3>
 
-<label> 5) <input name = "five" type = "text" size = "30" required/> is a networking protocol that runs over
+<label> 5) <input name = "five" id="five2" type = "text" size = "30" required/> is a networking protocol that runs over
        TCP/IP, and governs communication between web browsers and web servers.</label><br><br>
 
 <label> 6) A small icon displayed in a browser table that identifies
-       a website is called a <input name = "six" type = "text" size = "30" /> </label> <br><br>
+       a website is called a <input name = "six" id="six2" type = "text" size = "30" /> </label> <br><br>
 
 <span id="buttons">
       <input type = "submit" value = "Grade" />
