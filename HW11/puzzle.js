@@ -38,6 +38,13 @@ function loadPuzzle(){
     //keep track of element ids
     var numArray = fillNum()
 
+    //randomize pos
+    for (j = 0; j < puzArray.length; j++){
+        x = Math.floor(Math.random() * (500 - 10) + 10) + 'px'
+        y = Math.floor(Math.random() * (800 - 400) + 400) + 'px'
+        numArray[j].style.left = x
+        numArray[j].style.top = y
+    }
     //randomize pieces
     for (i = 0; i < numArray.length; i++){
         id = Math.floor(Math.random() * puzArray.length)
@@ -113,3 +120,4 @@ function fillNum(){
 
     return numArray
 }
+
