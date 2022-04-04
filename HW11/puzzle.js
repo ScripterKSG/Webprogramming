@@ -40,8 +40,8 @@ function loadPuzzle(){
 
     //randomize pos
     for (j = 0; j < puzArray.length; j++){
-        x = Math.floor(Math.random() * (500 - 10) + 10) + 'px'
-        y = Math.floor(Math.random() * (800 - 400) + 400) + 'px'
+        x = Math.floor(Math.random() * (650 - 10) + 10) + 'px'
+        y = Math.floor(Math.random() * (650 - 400) + 400) + 'px'
         numArray[j].style.left = x
         numArray[j].style.top = y
     }
