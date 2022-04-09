@@ -1,0 +1,28 @@
+.spot{
+    height:125px;
+    width:125px;
+    text-align: center;
+    font-size: 110px;
+}
+
+.board{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.score{
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    text-align: center;
+}
+
+.replay{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+

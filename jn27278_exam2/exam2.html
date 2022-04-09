@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Tic-Tac-Toe</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Tic-Tac-Toe">
+	<meta name="author" content="Jason Nguyen">
+    <link href= "layout.css" rel="stylesheet">
+    <script src="game.js"> </script>
+</head> 
+
+<body onload="elemSetup()">
+<!-- We use value=" " instead of "" so the button fits the table better-->
+	<table class="board" border="1" style="width:25%; height:25%">
+		<caption>Tic-Tac-Toe</caption>
+		<tr>
+			<td><input id="b1" class="spot" type="button" value=" " onclick="toe(this.id);" /></td>
+			<td><input id="b2" class="spot" type="button" value=" " onclick="toe(this.id);" /></td>
+			<td><input id="b3" class="spot" type="button" value=" " onclick="toe(this.id);" /></td>
+		</tr>
+		<tr>
+			<td><input id="b4" class="spot" type="button" value=" " onclick="toe(this.id);" /></td>
+			<td><input id="b5" class="spot" type="button" value=" " onclick="toe(this.id);" /></td>
+			<td><input id="b6" class="spot" type="button" value=" " onclick="toe(this.id);" /></td>
+		</tr>
+		<tr>
+			<td><input id="b7" class="spot" type="button" value=" " onclick="toe(this.id);" /></td>
+			<td><input id="b8" class="spot" type="button" value=" " onclick="toe(this.id);" /></td>
+			<td><input id="b9" class="spot" type="button" value=" " onclick="toe(this.id);" /></td>
+		</tr>
+	</table>
+    <br>
+
+<!-- Scoreboard Table-->   
+    <table class="score" border="1" style="width:20%;">
+		<caption>Scoreboard</caption>
+		<tr>
+			<td>X has won</td>
+			<td>O has won</td>
+		</tr>
+        <tr>
+			<td><p id = "xWins"> 0 </p></td>
+			<td><p id = "oWins"> 0 </p></td>
+		</tr>
+	</table>
+
+    <br>
+    <input class="replay" type="button" value="Replay" onclick="replay()"/>
+</html>
