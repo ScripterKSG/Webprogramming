@@ -10,15 +10,16 @@
     for ($i = 0; $i < 10; $i++){
    	if(isset($_POST["n" . $i]) && trim($_POST["n" . $i] != "")){
 		$lines[$i] = $_POST["n" . $i];
-		echo $i;
 	}
    }
 
+    //trim \n before writing to prevent stacking several \n
     //write newly inputted text to file
   
    $fh = fopen ($myFile, "w") or die("HELLO");
-    for ($i = 0; $i < 10; $i++){
-	fwrite ($fh, $line[$i] . "\n");
+   for ($i = 0; $i < 10; $i++){
+	   $lines[$i] = trim($lines[$i]);
+	   fwrite ($fh, $lines[$i] . "\n");  
     }
     fclose($fh);
 
