@@ -1,6 +1,6 @@
 <?php
-   error_reporting(E_ALL);
-   ini_set("display_errors", "on");
+  // error_reporting(E_ALL);
+  // ini_set("display_errors", "on");
    $myFile = "signup.txt";
     $lines = file($myFile);//file in to an array
     $time = array('8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 pm',
