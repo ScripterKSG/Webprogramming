@@ -1,0 +1,78 @@
+#container
+{
+	width: 90%;
+	margin: 10px auto;
+	background-color: black;
+	color: ghostwhite;
+	border: 2px ghostwhite;
+	line-height: 130%;
+}
+
+#top
+{
+	padding: .5em;
+	background-color: gray;
+	border-bottom: 2px ghostwhite;
+}
+
+#top h1
+{
+	padding: 0;
+	margin: 0;
+}
+
+#leftnav
+{
+	float: left;
+	width: 12%;
+	margin: 0;
+	padding: 1em;
+}
+
+#rightnav
+{
+	float: right;
+	width: 15%;
+	margin: 0;
+	padding: 1em;
+}
+
+#content
+{
+	margin-left: 160px;
+	border-left: 1px gray;
+	margin-right: 160px;
+	border-right: 1px gray;
+	padding: 1em;
+	max-width: 45em;
+}
+
+#topContent
+{
+	float: left;
+	margin-left: 1%;
+}
+
+#topContent h3
+{
+	margin: 0px
+}
+
+#footer
+{
+	clear: both;
+	margin: 0;
+	padding: .5em;
+	color: ghostwhite;
+	background-color: gray;
+	border-top: 2px ghostwhite;
+}
+
+#login {
+    display: inline;
+    font-weight: bold;
+    float:right;
+}
+
+#leftnav p, #rightnav p { margin: 0 0 1em 0; }
+#content h2 { margin: 0 0 .5em 0; }
