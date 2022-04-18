@@ -3,3 +3,7 @@ topButton{
     border: 2px solid black;
     margin: 5% 19% 10% 19%
 }
+
+topText{
+   text-align:right;			
+}

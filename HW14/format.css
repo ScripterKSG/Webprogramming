@@ -73,6 +73,11 @@
     font-weight: bold;
     float:right;
 }
+.loggedText {
+    text-align:right;
+    float:right;
+}
+
 
 #leftnav p, #rightnav p { margin: 0 0 1em 0; }
 #content h2 { margin: 0 0 .5em 0; }

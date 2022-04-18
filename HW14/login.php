@@ -11,7 +11,6 @@ error_reporting(E_ALL);
     $valid = FALSE;
     foreach($contents as $line) {
 	    if (trim($line) == $name){
-	    echo '<script> alert("HELLO"); </script>';
             setcookie("name", $name, time()+120, "/");
             $valid = TRUE;
             break;
@@ -21,6 +20,8 @@ error_reporting(E_ALL);
     if ($valid == FALSE){
         echo '<script> alert("Invalid Username or Password"); </script>';
     }
+
+    header("Location: homework14.php");
 
   
 

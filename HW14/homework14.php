@@ -19,12 +19,12 @@
 
 	<?php
     if(!isset($_COOKIE["name"])){
-	    echo '<input id="hid" name="hid" type="hidden" value=""/>';
+        echo '<input id="hid" name="hid" type="hidden" value=""/>';
         echo '<input id="login" type="submit" value="Login" />';
-	}
-	else{
-		echo "Logged In!";			      
-	}
+    }
+    else{
+	echo '<div id="loggedText"> "Logged In!" </div>';			      
+    }
 	?>
     </div>
 	</form>
