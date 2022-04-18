@@ -2,14 +2,14 @@
 function validate(){
     let user = prompt("Please enter your username");
     let pass = prompt("Please enter your password");
-    person = user + ":" + pass
-    if (person == null || person == "") {
-      text = "Login failed";
-    } else {
-      text = "Hello " + person + "! How are you today?";
-    }
-
+    var person = user.concat(":", pass);
+    alert(person);
+    if (user == null || user == "") {
+	    alert("GU");
+      return false;
+}
     document.getElementById("hid").value = person;
+	return true;
 }
 
 function notifyNotLogged(){

@@ -13,11 +13,19 @@
 	<h1>Cat Newspaper</h1> <br>
     4/14/2022 
 
-	<form action="login.php">
-    <div id="topButton">
+	<form action="login.php" method="POST" onsubmit="return validate();">
+ <div id="topButton">
         Austin, Texas
-		<input id="hid" name="hid" type="hidden" value=""/>
-        <input id="login" type="submit" value="Login" onClick="validate();" />
+
+	<?php
+      if(!isset($_COOKIE["name"])){
+	echo '<input id="hid" name="hid" type="hidden" value=""/>';
+        echo '<input id="login" type="submit" value="Login" />';
+	}
+	else{
+		echo "Logged In!";			      
+	}
+	?>
     </div>
 	</form>
 
