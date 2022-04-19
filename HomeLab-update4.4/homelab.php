@@ -16,7 +16,7 @@
 
 	<div id='top'>
 		<div id="top-img">
-			<a href='homelab.php'><img src='.imgs/HL_Logo.png' alt='HomeLab logo'></a>
+			<a href='homelab.php'><img src='imgs/HL_Logo.png' alt='HomeLab logo'></a>
 		</div>
 		<div id="top-brand">
 			<a href='homelab.php'>
