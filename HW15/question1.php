@@ -7,7 +7,7 @@
     }
 
     //if not answered, displays request to be answered
-    if($_SESSION["notAnswered"] == "notAnswered" ){
+    if($_SESSION["notAnswered"] == "notAnswered1" ){
 	    echo "Please answer before proceeding";
 	    echo "<br> <br>";
     }

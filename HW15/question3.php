@@ -8,7 +8,7 @@
     }
 	
     //if not answered, displays request to be answered
-    if($_SESSION["notAnswered"] == "notAnswered" ){
+    if($_SESSION["notAnswered"] == "notAnswered3" ){
        	    echo "Please answer before proceeding";
        	    echo "<br> <br>";
     }
@@ -24,7 +24,7 @@
     }
     //if not answered, go back to previous question and request question be answered
     else{
-       	$_SESSION["notAnswered"] = "notAnswered";
+       	$_SESSION["notAnswered"] = "notAnswered2";
     	header("Location: question2.php");
     }
 ?>
