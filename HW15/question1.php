@@ -15,6 +15,7 @@
 
 ?>
 
+<!--Question form for question 1 -->
 <form name="myForm" method = "POST" action = "question2.php">
     1. "URL" stands for "Universal Reference Link."
     <label> a) True <input name = "one" type = "radio" value = "a1" /> </label>
