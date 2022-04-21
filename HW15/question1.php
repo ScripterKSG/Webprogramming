@@ -1,15 +1,17 @@
 <h3>True / False</h3>
 
 <?php
-    if (time() - $_SESSION['LAST_ACTIVITY'] > 900){
+    session_start();
+    if (time() - $_SESSION["user"] > 900){
         header("Location: timedOut.php");
     }
-?>
 
-<?php
-    if(isset($_GET["notAnswered"])){
-        echo "Please answer before proceeding";
+    if($_SESSION["notAnswered"] == "notAnswered" ){
+	    echo "Please answer before proceeding";
+	    echo "<br> <br>";
     }
+    unset($_SESSION["notAnswered"]);
+
 ?>
 
 <form name="myForm" method = "POST" action = "question2.php" onsubmit="return validateForm();" novalidate>

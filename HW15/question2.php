@@ -1,8 +1,9 @@
 <h3>True / False</h3>
 
 <?php
+    session_start();
     $score = 0;
-    if (time() - $_SESSION['LAST_ACTIVITY'] > 900){
+    if (time() - $_SESSION["user"] > 900){
         header("Location: timedOut.php");
     }
 
@@ -17,8 +18,9 @@
         }
     }
     else{
-        $notAnswered = "notAnswered";
-        header("Location: question1.php? notAnswered = $notAnswered");
+
+	$_SESSION["notAnswered"] = "notAnswered";
+        header("Location: question1.php");
     }
 
     echo "TESTING GOOD";

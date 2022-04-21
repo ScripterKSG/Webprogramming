@@ -6,21 +6,21 @@
     $myFile = "passwd.txt";
     $contents = file($myFile);
 
+    session_start();
     //check if entered info is valid, if so make cookie
     $valid = FALSE;
     $name = $user . ":" . $pass;
     foreach($contents as $line) {
 	    if (trim($line) == $name){
-            session_start();
-            $_SESSION[$user] = time();
-            $valid = TRUE;
+            $_SESSION["user"] = time();
+	    $valid = TRUE;
             break;
         }
     }
 
     if ($valid == FALSE){
-        $invalid = "invalid";
-        header("Location: homework15.php?  invalid = $invalid" );
+	    $_SESSION["failed"] = "failed";
+	    header("Location: homework15.php");
     }
 
     else{
