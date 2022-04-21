@@ -19,7 +19,7 @@
 	
     // if answered, check if correct and update score session
     if(isset($one)){   
-        if ($one == "a1") {          
+        if ($one == "b1") {          
             $_SESSION["score"] += 1;     
         }
     }
