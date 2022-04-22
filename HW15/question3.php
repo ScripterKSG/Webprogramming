@@ -1,32 +1,21 @@
 <h3> Multiple Choice </h3>
 
 <?php
-
+    session_start();
     // if session timed out, terminate quiz 
     if (time() - $_SESSION["user"] > 900){
         header("Location: timedOut.php");
     }
 	
-    //if not answered, displays request to be answered
-    if($_SESSION["notAnswered"] == "notAnswered3" ){
-       	    echo "Please answer before proceeding";
-       	    echo "<br> <br>";
-    }
-    unset($_SESSION["notAnswered"]);
+	echo "Please answer before proceeding. Unmarked questions will be marked as wrong.";
+	echo "<br> <br>";
 
-    //get answer from last question
-    $two = $_POST["two"];
+    
+    //record answer from question 2 
+    $_SESSION["two"] = $_POST["two"];
 
-    if(isset($two)){   
-	if ($one == "a2") {          
-		$_SESSION["score"] += 1;     
-	}
-    }
-    //if not answered, go back to previous question and request question be answered
-    else{
-       	$_SESSION["notAnswered"] = "notAnswered2";
-    	header("Location: question2.php");
-    }
+    echo $_SESSION["one"];
+    echo $_SESSION["two"];
 ?>
 
 

@@ -7,13 +7,13 @@
     $contents = file($myFile);
 
     session_start();
+    
     //check if entered info is valid, if so make logged in session
     $valid = FALSE;
     $name = $user . ":" . $pass;
     foreach($contents as $line) {
 	    if (trim($line) == $name){
             $_SESSION["user"] = time();		//keep track of time logged in
-    	    $_SESSION["score"] = 0;		//keep track of score
 	    $valid = TRUE;
             break;
         }
