@@ -3,7 +3,8 @@
 <?php
     session_start();
     if (time() - $_SESSION["user"] > 900){
-        header("Location: timedOut.php");
+	    header("Location: timedOut.php");
+	    exit();
     }
 
 	echo "Please answer before proceeding. Unanswered questions will be marked as wrong.";

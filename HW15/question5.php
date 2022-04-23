@@ -4,7 +4,8 @@
     session_start();
     // if session timed out, terminate quiz 
     if (time() - $_SESSION["user"] > 900){
-        header("Location: timedOut.php");
+	    header("Location: timedOut.php");
+	    exit();
     }
 
 	echo "Please answer before proceeding. Unanswered questions will be marked as wrong.";
@@ -15,7 +16,7 @@
 ?>
 
 <form name="Q5" method="POST" action="question6.php">
-<label> 5) <input name = "five" id="five2" type = "text" size = "30" required/> is a networking protocol that runs over
+<label> 5) <input name = "five" id="five2" type = "text" size = "30"/> is a networking protocol that runs over
        TCP/IP, and governs communication between web browsers and web servers.</label><br><br>
 
        <input type = "submit" value = "Next Question" />

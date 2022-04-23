@@ -1,5 +1,6 @@
 <?php
-	echo "Quiz is over, out of time";
-	session_start();
-	session_destroy();
+session_start();
+$_SESSION["timedOut"] == "timedOut";
+header("Location:grade.php");
+exit();
 ?>

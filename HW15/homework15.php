@@ -19,11 +19,17 @@
 	    echo "<br> <br>";
     }
     unset($_SESSION["failed"]);
+
+    if($_SESSION["taken"] == "taken"){
+    	echo "Quiz has already been taken by this user";
+	echo "<br> <br>";
+    }
+    unset($_SESSION["taken"]);
     ?>
 
     <label> Username <input name = "user" id="user"  type = "text" size = "20" /> </label><br><br>
 
-    <label> Password <input name = "pass" id="pass"  type = "text" size = "20" /> </label><br><br>
+    <label> Password <input name = "pass" id="pass"  type = "password" size = "20" /> </label><br><br>
     <input type = "submit" value = "Login" />
     <input type = "reset" value = "Clear" />
     <br>

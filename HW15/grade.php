@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $correct = 0;
 
     //record answer from question 5
@@ -32,6 +33,18 @@
     if($blank6 == "favicon"){$correct = $correct + 1;}
 
     $score = strval($correct) . " / 6";
-    echo '<script> alert("'.$score.'"); </script>';
-    echo "You have completed the quiz."
+    if ($_SESSION["timedOut"] == "timedOut"){
+    	echo "You have run out of time to complete the quiz. Your score for
+		what you have answered is below <br> <br>";
+    }
+    echo "You have completed the quiz. Your score is $score.";
+
+    //record score
+    $myFile = fopen("results.txt", "a") or die("Can't open file!");
+    $recordedScore = $_SESSION["nameForScore"] . ":" . strval($correct) . " / 6";
+    fwrite($myFile, $recordedScore);
+    fclose($myFile);
+
+    session_destroy();
+    
 ?>
