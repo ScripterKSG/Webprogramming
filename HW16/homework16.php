@@ -1,14 +1,18 @@
 <?php
 session_start();
- if (isset($_POST["database"])) {
+if (isset($_POST["loggedIn"])){
+	doActions();
+}
+else if (isset($_POST["database"])) {
     doDatabase();
- } else {
+} 
+else {
     doLogin();
  }
 
 #######################################################################
 
- function doLogin()
+function doLogin()
  {
   $script = $_SERVER['PHP_SELF'];
 
@@ -19,9 +23,7 @@ session_start();
 	</head>
 	<body>
 	<h3> Log into database </h3>
-
 	<form method = "POST" action = "$script">
-
    	<table>
     	<tr>
     	    <td>Username:</td>
@@ -32,11 +34,8 @@ session_start();
         	<td> <input name = "pwd" type = "password" size = "30" required /> </td>
     	</tr>
    	</table>
-
 	<p> <input name = "database" type = "submit" value = "Go" /> </p>
-
 	</form>
-
 	</body>
 	</html>
 TOP;
@@ -44,7 +43,7 @@ TOP;
 
 #######################################################################
 
-  function doDatabase()
+function doDatabase()
   {
 
     //verify login credentials
@@ -89,4 +88,30 @@ TOP;
 	}
     }
 }
+
+
+function doActions(){
+print <<<BUTTONS
+	<html>
+	<head>
+	<title> Database Demo </title>
+	</head>
+	<body>
+	<h3> Actions </h3>
+
+	<a href="insert.php" class="button">Insert Student Record</a> <br><br>
+	<a href="update.php" class="button">Update Student Record</a> <br><br>
+	<a href="delete.php" class="button">Delete Student Record</a> <br><br>
+	<a href="view.php" class="button">View Student Record</a> <br><br>
+
+	<form action="logOut.php" method="post">
+    	<input type="submit" value=Logout" />
+	</form>
+
+	</body>
+	</html>
+BUTTONS;
+}
+
+?>
 ?>
