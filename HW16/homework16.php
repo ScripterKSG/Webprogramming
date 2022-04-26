@@ -1,9 +1,6 @@
 <?php
 session_start();
-if (isset($_POST["loggedIn"])){
-	doActions();
-}
-else if (isset($_POST["database"])) {
+if (isset($_POST["database"])) {
     doDatabase();
 } 
 else {
@@ -84,34 +81,12 @@ function doDatabase()
 	if ($mysqli->connect_errno) {
   		die('Connect Error: ' . $mysqli->connect_errno . ": " . $mysqli->connect_error);
 	} else {
-		echo "Connection successful <br><br>";
+		header("Location: actions.php");
+		exit();
 	}
     }
 }
 
 
-function doActions(){
-print <<<BUTTONS
-	<html>
-	<head>
-	<title> Database Demo </title>
-	</head>
-	<body>
-	<h3> Actions </h3>
 
-	<a href="insert.php" class="button">Insert Student Record</a> <br><br>
-	<a href="update.php" class="button">Update Student Record</a> <br><br>
-	<a href="delete.php" class="button">Delete Student Record</a> <br><br>
-	<a href="view.php" class="button">View Student Record</a> <br><br>
-
-	<form action="logOut.php" method="post">
-    	<input type="submit" value=Logout" />
-	</form>
-
-	</body>
-	</html>
-BUTTONS;
-}
-
-?>
 ?>

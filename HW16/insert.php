@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_POST["loggedIn"])){
+if (isset($_SESSION["loggedIn"])){
     if (isset($_POST["insert"])){
         doInsertData();
     }
@@ -54,7 +54,7 @@ else {
       </form>
       </body>
       </html>
-  TOP;
+TOP;
     
  }
 
