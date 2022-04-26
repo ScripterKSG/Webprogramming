@@ -1,9 +1,7 @@
 <?php
-
- if (isset($_SESSION["loggedIn"])) {
-    if (time() - $_SESSION["loggedIn"] < 900){
-        doDatabase();
-    }
+session_start();
+ if (isset($_POST["database"])) {
+    doDatabase();
  } else {
     doLogin();
  }
@@ -13,10 +11,6 @@
  function doLogin()
  {
   $script = $_SERVER['PHP_SELF'];
-  if (isset($_SESSION["failed"])){
-      echo '<script> Login Failed </script>';
-      unsset($_SESSION["failed"]);
-  }
 
   print <<<TOP
 	<html>
@@ -57,26 +51,26 @@ TOP;
     $user = $_POST["user"];
     $pwd = $_POST["pwd"];
     $myFile = "passwd.txt";
-    $contents = file($myFile);
+    $contents = file($myFile) or die("Failed to read file");
 
-    $name = $user . ":" . $pass;
-    $valid = FALSE;
+    $name = $user . ":" . $pwd;
     foreach($contents as $line) {
 	    if (trim($line) == $name){
 	    	$_SESSION["loggedIn"] = time();		//session for logged in
-	    	$valid = TRUE;
         }
     }
     //if failed, go back to login
-    if ($valid == FALSE){
-        $_SESSION["failed"] = "failed";
-        doLogin();
+    if (!isset($_SESSION["loggedIn"])){
+	    echo '<script> alert("Login Failed") </script>';
+	    unset($_POST["database"]);
+	    doLogin();
     }
 
+    if (isset($_SESSION["loggedIn"])){
 	// Optionally store the parameters in variables
 	$server = "spring-2022.cs.utexas.edu";
 	$user   = "cs329e_bulko_jasonn12";
-	$pwd    = "Musse17swap3Rail";
+	$pwd    = "Mussel7swap3Rail";
 	$dbName = "cs329e_bulko_jasonn12";
 
 	// For debugging only
@@ -93,5 +87,6 @@ TOP;
 	} else {
 		echo "Connection successful <br><br>";
 	}
-  }
+    }
+}
 ?>
