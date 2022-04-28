@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["loggedIn"])){
-    if (isset($_POST["View"])){
+    if (isset($_POST["view"])){
         doViewData();
     }
     else{
@@ -26,18 +26,18 @@ else {
         <table>
         <tr>
         <td>ID:</td>
-        <td> <input name = "id" type = "text" size = "30" required /> </td>
+        <td> <input name = "id" type = "text" size = "30"  /> </td>
         </tr>
         <tr>
         <td>LAST:</td>
-        <td> <input name = "last" type = "text" size = "30" required /> </td>
+        <td> <input name = "last" type = "text" size = "30"  /> </td>
         </tr>
         <tr>
         <td>FIRST:</td>
-        <td> <input name = "first" type = "text" size = "30" required /> </td>
+        <td> <input name = "first" type = "text" size = "30"  /> </td>
         </tr>
         </table>
-      <p> <input name = "View" type = "submit" value = "Go" /> </p>
+      <p> <input name = "view" type = "submit" value = "Go" /> </p>
       </form>
 
 
@@ -52,12 +52,33 @@ TOP;
  }
 
  function doViewData(){
-	 // GET DATA
-	$id = $_POST["id"];
-	$last = $_POST["last"];
-	$first = $_POST["first"];
+	 //begin building command dynamically
+    $command = "SELECT * FROM students WHERE 1=1" ;
+    // GET DATA
+    $allEmpty = TRUE;
+    if (!empty($_POST["id"])){
+	    $id = $_POST["id"];
+	    $command .= " AND id = $id"; 
+	    $allEmpty = FALSE;
+    }
+    if (!empty($_POST["last"])){ 
+	    $last = $_POST["last"];
+	    $command .= " AND LAST = '$last'";
+	    $allEmpty = FALSE;
+    }
+    if (!empty($_POST["first"])){
+	    $first = $_POST["first"];
+	    $command .= " AND FIRST = '$first'";
+	    $allEmpty = FALSE;
+   }
+    if ($allEmpty){
+    	echo '<script> alert("Please fill out at least one field") </script>';
+    	    unset($_POST["view"]);
+    	    doView();
+    }
 
-	//Access database
+    $command .= " ORDER BY LAST, FIRST";
+
     $server = "spring-2022.cs.utexas.edu";
     $user   = "cs329e_bulko_jasonn12";
     $pwd    = "Mussel7swap3Rail";
@@ -66,15 +87,18 @@ TOP;
 	$mysqli = new mysqli ($server, $user, $pwd, $dbName);
 	// Issue the query
 
-    $command = "SELECT * FROM students WHERE id= $id, LAST = '$last', FIRST = '$first";
     $result = $mysqli->query($command);
-    echo $result;
 	// Verify the result
 	if (!$result) {
-   		die("Query failed: $mysqli->error <br>");
+   		die("Query failed: $mysqli->error <br> $command");
 	} else {
 		echo "Query succeeded <br> <br>";
 	}
-	echo "<a href = 'actions.php' class='button'>Click here to return to actions page</a> <br><br>";
+
+
+    while($row = $result->fetch_row()){
+	echo "$row[0] $row[1] $row[2] $row[3] $row[4] <br>";
+    }
+    echo "<a href = 'actions.php' class='button'>Click here to return to actions page</a> <br><br>";
  }
 ?>
