@@ -72,35 +72,36 @@ TOP;
     $pwd    = "Mussel7swap3Rail";
     $dbName = "cs329e_bulko_jasonn12";
 
+
 	$mysqli = new mysqli ($server, $user, $pwd, $dbName);
 	// Issue the query
 
-    if (isset($last)){
-        $command = "UPDATE students SET LAST = '$last' WHERE id= $id";
+    if (!empty($_POST["last"])){
+	    $command = "UPDATE students SET LAST = '$last 'WHERE id = $id";
         $result = $mysqli->query($command);
         $valid = TRUE;
     }
 
-    if (isset($first)){
-        $command = "UPDATE students SET FIRST = '$first' WHERE id= $id";
+    if (!empty($_POST["first"])){
+        $command = "UPDATE students SET FIRST = '$first' WHERE id = $id";
         $result = $mysqli->query($command);
         $valid = TRUE;
     }
 
-    if (isset($major)){
-        $command = "UPDATE students SET MAJOR = '$major' WHERE id= $id";
+    if (!empty($_POST["major"])){
+        $command = "UPDATE students SET MAJOR = '$major' WHERE id = $id";
         $result = $mysqli->query($command);
         $valid = TRUE;
     }
 
-    if (isset($gpa)){
-        $command = "UPDATE students SET GPA = '$gpa' WHERE id= $id";
+    if (!empty($_POST["gpa"])){
+        $command = "UPDATE students SET GPA = $gpa WHERE id = $id";
         $result = $mysqli->query($command);
         $valid = TRUE;
     }
 
     if (!$valid){
-        echo '<script> alert("Please fill out at least one filed") </script>';
+        echo '<script> alert("Please fill out at least one field") </script>';
 	    unset($_POST["update"]);
 	    doUpdate();
     }
