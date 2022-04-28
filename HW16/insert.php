@@ -59,9 +59,27 @@ TOP;
  }
 
  function doInsertData(){
-    $command = "SELECT * FROM students WHERE FIRST = \"Amy\"";
+
+
+	 // GET DATA
+	 $id = $_POST["id"];
+	$last = $_POST["last"];
+	$first = $_POST["first"];
+	$major = $_POST["major"];
+	$gpa = $_POST["gpa"];
+
+	//make command
+	 $command = "INSERT INTO students (id, LAST, FIRST, MAJOR, GPA)
+		 VALUES ($id, '$last', '$first', '$major', $gpa)";
 	echo "SQL command: $command <br>";
 
+	//Access database
+		$server = "spring-2022.cs.utexas.edu";
+		$user   = "cs329e_bulko_jasonn12";
+		$pwd    = "Mussel7swap3Rail";
+		$dbName = "cs329e_bulko_jasonn12";
+
+	$mysqli = new mysqli ($server, $user, $pwd, $dbName);
 	// Issue the query
 	$result = $mysqli->query($command);
 
@@ -71,5 +89,6 @@ TOP;
 	} else {
 		echo "Query succeeded <br> <br>";
 	}
+	echo "<a href = 'actions.php' class='button'>Click here to return to actions page</a> <br><br>";
  }
 ?>
