@@ -1,0 +1,232 @@
+/*Top Layer*/
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+/*-------------Layer 1*/
+#top {
+  padding: 0.5em;
+  height: 11%;
+  max-height: 7em;
+  overflow: hidden;
+  background-color: #2e294e;
+  border-bottom: 1px solid rgb(65, 63, 63);
+  text-align: center;
+  color: #f9eae1;
+}
+
+#main {
+  clear: both;
+  overflow: hidden;
+  height: 85%;
+  background-image: url("./imgs/wood.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer {
+  clear: both;
+  margin: 0;
+  background-color: #f9eae1;
+  border-bottom: 1px solid rgb(65, 63, 63);
+  font-size: 0.8em;
+  height: 2%;
+  width: 100%;
+}
+
+/*----------------Layer 2*/
+#top-img {
+  overflow: inherit;
+  float: left;
+  margin: 0% 0 0% auto;
+  width: 11%;
+  height: 100%;
+}
+
+#top-brand {
+  overflow: hidden;
+  float: left;
+  width: 78%;
+  height: 100%;
+  margin: 0% auto 0% auto;
+}
+
+#top-signin {
+  overflow: hidden;
+  float: right;
+  margin: 0% auto 0% auto;
+  width: 11%;
+  height: 100%;
+}
+
+#leftnav {
+  overflow: inherit;
+  min-width: 5em;
+  float: left;
+  width: 12%;
+  margin: 0;
+  padding: 0;
+  background-color: #7c98b3;
+  border-right: 1px solid rgb(65, 63, 63);
+  font-weight: bold;
+  height: 100%;
+}
+
+#content {
+  margin-left: 15%;
+  margin-right: 0;
+  padding: 0 0 10% 5%;
+  max-width: 85%;
+  height: 100%;
+}
+
+#signature {
+  float: right;
+  text-align: right;
+  margin-right: 2%;
+  width: 45%;
+  color: #2e294e;
+}
+
+#date {
+  float: left;
+  text-align: left;
+  margin-left: 2%;
+  width: 45%;
+  color: #2e294e;
+}
+
+/*---------------Layer 3 and on...*/
+
+#top-img a {
+  display: contents;
+}
+#top-img a:hover img {
+  opacity: 0.7;
+}
+#top-img img {
+  overflow: inherit;
+  height: 100%;
+  width: 100%;
+  max-width: 12em;
+  max-height: 5.75em;
+  float: left;
+}
+
+#top-brand #brand {
+  margin-top: 0.5%;
+  font-size: 9vmin;
+  color: #f9eae1;
+  font-family: "Tahoma", sans-serif;
+  font-weight: bold;
+}
+
+#top-signin a {
+  color: #f9eae1;
+  display: contents;
+  font-weight: bold;
+  text-decoration: none;
+}
+#top-signin a:hover {
+  color: #f9eae1;
+  font-style: italic;
+}
+#top-brand a {
+  color: #000;
+  display: content;
+  text-decoration: none;
+}
+#top-signin #signin {
+  margin: auto;
+  text-align: right;
+  padding-right: 10%;
+  padding-top: 10%;
+}
+#leftnav ul {
+  overflow: inherit;
+  min-width: inherit;
+  list-style-type: none;
+  margin: 0;
+  padding: 1em;
+}
+#nav .search_input {
+  overflow: hidden;
+  float: left;
+  width: 100%; 
+  padding: 0 0 6% 2%;
+}
+#leftnav li a {
+  display: block;
+  color: #2e294e;
+  text-decoration: none;
+  padding: 1em 0 1em 0;
+  width: 110%;
+  font-family: "Tahoma", sans-serif;
+}
+.subnav {
+  border: 1px solid rgb(65, 63, 63)
+}
+#nav li a {
+  display: block;
+  color: #2e294e;
+  text-decoration: none;
+}
+#nav li a:hover {
+  font-style: italic;
+}
+.subnav {
+  position: absolute;
+  top: 15.5%;
+  left: -200px;
+  min-height: 0;
+  z-index: 1;
+  background-color: #7c98b3;
+  width: 10%;
+}
+.subnav li a {
+  display: block;
+  color: #2e294e;
+  text-decoration: none;
+}
+.subnav li a:hover {
+  font-style: italic;
+}
+#content {
+  color: #2e294e;
+  font-family: "Tahoma", sans-serif;
+  overflow: scroll;
+}
+#content h3 {
+  font-size: 2em;
+  font-weight: bold;
+}
+#content img {
+  display: block;
+  padding: 5% 0 5% 0;
+}
+#content p {
+  max-width: 70%;
+}
+#content li {
+  max-width: 70%;
+}
+#content table {
+  width: 50%;
+  margin-left: 15%;
+  margin-right: auto;
+}
+
+#content table td {
+width: 50%;
+padding: 0.5em;
+}
+
+#content table td:nth-child(even) {
+text-align: right;
+}
+
+#content #buttons td {
+text-align: center;
+}
+
