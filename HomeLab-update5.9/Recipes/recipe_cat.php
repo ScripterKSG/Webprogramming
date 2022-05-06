@@ -52,6 +52,13 @@ echo $utils->head($object);
 			?>
 			<br>
 			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
 			<div id='subscribers'><b>*</b> means the recipe is for subscribers only!</div>
 		</div>
 	</div>

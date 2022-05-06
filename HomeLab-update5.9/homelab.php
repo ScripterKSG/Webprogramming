@@ -43,11 +43,14 @@ echo $utils->head($object);
 				After all, there's no place like HomeLab.
 				
 			</p>
-			<table class="labs" style="width:25%; height:25%">
+			<table class="labs" style="margin:0;">
 			<tr>
-				<td><img id="pic1" src="lab1.jpg" alt = "lab1" width = "640" height = "480" /></td>
-				<td><img id="pic2" src="lab2.jpg" alt = "lab3" width = "640" height = "480" /></td>
-				<td><img id="pic3" src="lab3.jpeg" alt = "lab3" width = "640" height = "480" /></td>
+				<td><img id="pic1" src="lab1.jpg" alt = "lab1" width = "320" height = "240" /></td>
+				<td><img id="pic2" src="lab2.jpg" alt = "lab2" width = "320" height = "240" /></td>
+			</tr>
+			<tr>
+				<td><img id="pic3" src="lab3.jpeg" alt = "lab3" width = "320" height = "240" /></td>
+				<td><img id="pic4" src="lab4.jpg" alt = "lab4" width = "320" height = "240" /></td>
 			</tr>
 			</table>
 		</div>
