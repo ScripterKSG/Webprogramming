@@ -279,7 +279,7 @@ class Mechs
             die('Connect Error: ' . $mysqli->connect_errno . ": " . $mysqli->connect_error);
         }
         $user = $mysqli->real_escape_string($user);
-        $pass = $mysqli->real_escape_string($pass)
+        $pass = $mysqli->real_escape_string($pass);
         $command = "INSERT INTO Accounts VALUES ('$user', '$pass')";
         $result = $mysqli->query($command);
         if (!$result) {
